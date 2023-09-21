@@ -10,7 +10,7 @@ import (
 )
 
 func NewPostgresConnection() *sql.DB {
-	db, err := sql.Open("postgres", "host=localhost port=5432 user=root password=root dbname=go-chat ssmode=disable")
+	db, err := sql.Open("postgres", "host=localhost port=5432 user=root password=root dbname=go-chat sslmode=disable")
 	if err != nil {
 		log.Fatalf("failed open connetion | err : %v", err)
 	}

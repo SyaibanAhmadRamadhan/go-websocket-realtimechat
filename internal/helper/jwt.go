@@ -8,7 +8,7 @@ import (
 )
 
 type Jwt struct {
-	UserID string
+	UserID int64
 	Key    string
 	Exp    time.Duration
 }

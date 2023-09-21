@@ -40,7 +40,7 @@ func (u *UserRepositoryImpl) Create(ctx context.Context, user *domain.User) (int
 }
 
 func (u *UserRepositoryImpl) GetByEmailOrID(ctx context.Context, username, email string) (*domain.User, error) {
-	query := `SELECT id, username, email, password WHERE username = $1 OR email = $2`
+	query := `SELECT id, username, email, password FROM users WHERE username = $1 OR email = $2`
 
 	conn, err := u.db.Conn(ctx)
 	if err != nil {

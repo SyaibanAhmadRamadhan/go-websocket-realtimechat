@@ -40,5 +40,5 @@ type UserRepository interface {
 
 type UserUsecase interface {
 	Create(ctx context.Context, req *RequestCreateUser) (*ResponseUser, error)
-	Login(ctx context.Context) (*ResponseLogin, error)
+	Login(ctx context.Context, req *RequestLogin) (*ResponseLogin, error)
 }
