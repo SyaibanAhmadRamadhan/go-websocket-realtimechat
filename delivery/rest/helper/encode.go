@@ -40,6 +40,6 @@ func SuccessEncode(w http.ResponseWriter, data any, message string) {
 	w.WriteHeader(200)
 	err := json.NewEncoder(w).Encode(resp)
 	if err != nil {
-		log.Fatalf("failed encoded")
+		log.Fatalf("failed encoded | err %v", err)
 	}
 }
